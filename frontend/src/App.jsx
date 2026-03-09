@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AdminDashboard from "./pages/AdminDashboard";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
+import EmployeeList from "./pages/EmployeeList";
+import AddEmployee from "./pages/AddEmployee";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import RoleBaseRoutes from "./utils/RoleBaseRoutes";
 import AdminSummary from "./components/dashboard/AdminSummary";
@@ -35,6 +37,8 @@ function App() {
      
     }>
       <Route index element={<AdminSummary />} />
+      <Route path="employees" element={<EmployeeList />} />
+      <Route path="add-employee" element={<AddEmployee />} />
         <Route path="departments" element={<DepartmentList />} />
         <Route path="add-department" element={<AddDepartment />} />
         <Route path="department/:id" element={<EditDepartment />} />

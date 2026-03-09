@@ -49,9 +49,9 @@ const login = (user) => {
     setUser(user)
 }
 const logout = () => {
-    setUser(null)
     localStorage.removeItem("token")
-}
+    setUser(null);
+};
 
 return (
        <userContext.Provider value={{user, login, logout, loading}}>
