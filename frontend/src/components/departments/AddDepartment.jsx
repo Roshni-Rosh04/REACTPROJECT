@@ -25,7 +25,7 @@ const AddDepartment = () => {
                 department,
                 {
                     headers: {
-                        "Authorization" : `Bearer ${token}`
+                        "Authorization" : `Bearer ${localStorage.getItem('token')}`
                     } 
                 }
             );

@@ -14,6 +14,7 @@ import AddDepartment from "./components/departments/AddDepartment";
 import EditDepartment from "./components/departments/EditDepartment";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import EditEmployee from "./pages/EditEmployee";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="departments" element={<DepartmentList />} />
         <Route path="add-department" element={<AddDepartment />} />
         <Route path="department/:id" element={<EditDepartment />} />
+        <Route path="edit-employee/:id" element={<EditEmployee />} />
       </Route>
 
         {/* Employee Dashboard */}
