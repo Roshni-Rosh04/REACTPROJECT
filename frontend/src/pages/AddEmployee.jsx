@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const AddEmployee = () => {
+const AddEmployee = () =>{
 
 const [departments, setDepartments] = useState([]);
 const [formData, setFormData] = useState({});
@@ -27,7 +27,6 @@ const handleChange = (e) => {
   }
 };
 
-
 const handleSubmit = async (e) => {
 e.preventDefault();
 
@@ -39,8 +38,8 @@ e.preventDefault();
  try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                'http://localhost:3000/api/department/add',
-                department,
+                'http://localhost:3000/api/employee/add',
+                 formDataobj,
                 {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem('token')}`
@@ -285,7 +284,6 @@ Add Employee
 </button>
 </form>
 </div>
-
 );
 };
 
