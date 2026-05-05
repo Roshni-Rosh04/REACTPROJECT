@@ -21,7 +21,7 @@ const AddDepartment = () => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                'http://localhost:3000/api/department/add',
+                'http://localhost:5000/api/department/add',
                 department,
                 {
                     headers: {

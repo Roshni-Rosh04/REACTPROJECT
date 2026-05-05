@@ -16,7 +16,7 @@ useEffect(() => {
         
         if(token){
             const response = await axios.get(
-            'http://localhost:3000/api/auth/verify', 
+            'http://localhost:5000/api/auth/verify', 
             {
                 headers: {
                   Authorization : `Bearer ${token}`  
@@ -32,11 +32,10 @@ useEffect(() => {
 
             setLoading(false)
         }
-        }catch(error) {
-            
-           if(error.response && !error.response.data.error){
-            setUser(null)
-           }
+        }catch (error) {
+  console.error("Auth error:", error);
+  setUser(null);
+
         } finally {
             setLoading(false)
         }

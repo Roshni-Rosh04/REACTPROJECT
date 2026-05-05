@@ -22,7 +22,7 @@ export const DepartmentButtons = ({ DepId, refreshList }) => {
     if (!confirmDelete) return;
 
     try {
-      const response = await axios.delete(`http://localhost:3000/api/department/${DepId}`, {
+      const response = await axios.delete(`http://localhost:5000/api/department/${DepId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
